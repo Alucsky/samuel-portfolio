@@ -19,3 +19,16 @@ themeBtn.addEventListener('click', () => {
     localStorage.setItem('theme', 'dark')
   }
 })
+
+const scrollProgress = document.querySelector('.scroll-progress')
+
+window.addEventListener('scroll', () => {
+  const totalHeight = document.body.scrollHeight - window.innerHeight
+
+  const currentScroll = window.scrollY
+
+  const progressHeight =
+    totalHeight > 0 ? (currentScroll / totalHeight) * 100 : 0
+
+  scrollProgress.style.width = `${progressHeight}%`
+})
