@@ -69,6 +69,20 @@ header {
   padding: 0 20px;
 }
 
+.scroll-progress {
+  position: absolute;
+  bottom: 0;
+  left: 50%; 
+  transform: translateX(-50%);
+  height: 4px; 
+  background-color: var(--primary); 
+  width: 0%; 
+  z-index: 1001; 
+  box-shadow: 0 0 10px var(--primary); 
+  border-radius: 0 0 4px 4px;
+  transition: width 0.1s ease-out;
+}
+
 .nav-right {
   display: flex;
   align-items: center;
@@ -472,5 +486,324 @@ footer {
   }
   .social-icons {
     justify-content: center;
+  }
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 30px 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px -10px rgba(0, 210, 255, 0.15);
+}
+
+.icon-box {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  background: var(--tag-bg);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 210, 255, 0.2);
+}
+
+.skill-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+.skill-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.skill-tags span {
+  font-size: 0.75rem;
+  padding: 5px 12px;
+  background: rgba(255, 255, 255, 0.03); 
+  color: var(--text-muted);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  transition: 0.3s;
+}
+
+.skill-card:hover .skill-tags span {
+  border-color: var(--primary);
+  color: var(--text-main);
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.quest-map {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.quest-map::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 60px;
+  height: 100%;
+  
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='120' viewBox='0 0 60 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 Q 55 30 30 60 Q 5 90 30 120' stroke='%2300d2ff' fill='none' stroke-width='3' stroke-dasharray='8,8' stroke-linecap='round'/%3E%3C/svg%3E");
+  
+  background-repeat: repeat-y;
+  transform: translateX(-50%);
+  z-index: 0;
+  opacity: 0.4;
+  
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+.quest-point {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.quest-marker {
+  width: 50px;
+  height: 50px;
+  background: var(--bg-body);
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 1.2rem;
+  z-index: 2;
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+
+.quest-point:hover .quest-marker {
+  background: var(--primary);
+  color: var(--bg-body);
+  transform: translateX(-50%) scale(1.2);
+  box-shadow: 0 0 25px rgba(0, 210, 255, 0.6);
+}
+
+.quest-card {
+  width: 40%;
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid var(--border);
+  position: relative;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.quest-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.quest-point.left {
+  justify-content: flex-start;
+}
+.quest-point.left .quest-card {
+  margin-right: auto; 
+}
+
+.quest-point.right {
+  justify-content: flex-end;
+}
+.quest-point.right .quest-card {
+  margin-left: auto; 
+  text-align: right; 
+}
+
+.quest-card::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 0; 
+  height: 0;
+  border-style: solid;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.quest-point.left .quest-card::after {
+  right: -10px;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent var(--border);
+  transform: translateY(-50%);
+}
+.quest-point:hover .quest-card::after {
+   border-left-color: var(--primary);
+}
+
+.quest-point.right .quest-card::after {
+  left: -10px;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--border) transparent transparent;
+  transform: translateY(-50%);
+}
+.quest-point.right:hover .quest-card::after {
+   border-right-color: var(--primary);
+}
+
+.quest-date {
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.quest-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: var(--text-main);
+}
+
+.quest-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.quest-loot {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.quest-point.right .quest-loot {
+  justify-content: flex-end;
+}
+
+.quest-loot span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.quest-card:hover .quest-loot span {
+  background: rgba(0, 210, 255, 0.1);
+  border-color: rgba(0, 210, 255, 0.2);
+  color: var(--text-main);
+}
+
+.quest-loot i {
+  color: #fbbf24;
+}
+
+.star-card {
+  border-color: rgba(251, 191, 36, 0.4);
+  background: linear-gradient(145deg, var(--card-bg), rgba(251, 191, 36, 0.05));
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.05);
+}
+.star-card h3 {
+  color: #fbbf24;
+}
+
+.map-end-point {
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+.map-end-point span {
+  background: var(--bg-body);
+  padding: 8px 24px;
+  border: 2px dashed var(--border);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .quest-map::before {
+    left: 30px;
+  }
+  
+  .quest-marker {
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .quest-card {
+    width: calc(100% - 80px); 
+    margin-left: 80px !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
+  
+  .quest-point {
+    justify-content: flex-start;
+  }
+  
+  .quest-loot {
+    justify-content: flex-start !important;
+  }
+
+  .quest-point.left .quest-card::after,
+  .quest-point.right .quest-card::after {
+    display: none;
   }
 }
