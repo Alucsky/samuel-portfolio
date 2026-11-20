@@ -659,7 +659,7 @@ em {
 }
 .stage-progress {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 6px;
 }
 .stage-progress i {
@@ -913,6 +913,31 @@ em {
   }
 }
 
+.v-hbars rect {
+  fill: var(--accent);
+  opacity: 0.85;
+  transform-box: fill-box;
+  transform-origin: left;
+  animation: v-hbar 3s ease-in-out infinite alternate;
+}
+.v-hbars rect:nth-child(2) {
+  animation-delay: -1s;
+}
+.v-hbars rect:nth-child(3) {
+  animation-delay: -2s;
+}
+.job-intro a {
+  color: var(--accent);
+}
+@keyframes v-hbar {
+  from {
+    transform: scaleX(0.55);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 /* O que parece clicável agora responde */
 .case-facts li {
   transition:
@@ -963,7 +988,8 @@ em {
   transform: translateY(10px);
   transform-box: fill-box;
 }
-.js .is-active .v-pop {
+.js .stage-panel.is-active .v-pop,
+.js .case-visual.is-seen .v-pop {
   animation: v-pop 0.55s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0s) forwards;
 }
 @keyframes v-pop {
@@ -1503,7 +1529,8 @@ em {
     transform: none;
   }
   .js .v-pop,
-  .js .is-active .v-pop {
+  .js .stage-panel.is-active .v-pop,
+  .js .case-visual.is-seen .v-pop {
     opacity: 1;
     transform: none;
   }

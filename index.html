@@ -255,7 +255,9 @@
                   reenvio nunca duplicar ninguém, cada registro leva um
                   identificador gerado no dispositivo e a API responde de forma
                   <strong>idempotente</strong>, validado com testes e2e e
-                  em testes com pessoas usando o app.
+                  em testes com pessoas usando o app. O mesmo QR Code também
+                  vai para o <strong>Apple Wallet e o Google Wallet</strong>,
+                  com a infraestrutura de passes e certificados que configurei.
                 </p>
                 <ul class="case-facts">
                   <li><b>0</b> duplicados em reenvio do mesmo registro</li>
@@ -374,7 +376,10 @@
                   espaçamentos e tamanhos fora do padrão, monta a mensagem de
                   dúvidas para o designer, implementa o componente e abre uma
                   página que o compara com o Figma, propriedade por
-                  propriedade.
+                  propriedade. No dia a dia, também automatizei o lançamento de
+                  horas no Jira e os resumos diários do time, e trabalho com
+                  <strong>git worktrees</strong>, tocando várias frentes em
+                  paralelo sem perder o padrão do código.
                 </p>
                 <ul class="case-facts">
                   <li><b>16 h</b> para o trabalho de uma sprint, feito por uma pessoa</li>
@@ -408,15 +413,88 @@
 </svg>
               </figure>
             </article>
+
+            <article class="case" data-step="4" data-label="Captação e Analytics">
+              <span class="case-n">05</span>
+              <div class="case-body">
+                <h3>Captação medida do clique à inscrição</h3>
+                <p>
+                  Construí a landing page configurável do evento, com
+                  pré-visualização em tempo real, e a inscrição direto por ela.
+                  Para saber de onde vem cada inscrito, integrei o
+                  <strong>Google Analytics por OAuth</strong> em cada workspace,
+                  criei links rastreáveis por canal e montei as métricas de
+                  captação, que cruzam acessos e inscrições link a link.
+                </p>
+                <ul class="case-facts">
+                  <li><b>OAuth</b> do Google Analytics por workspace</li>
+                  <li><b>1 link</b> rastreável por canal de divulgação</li>
+                </ul>
+                <p class="tags">
+                  <span>Google Analytics</span><span>OAuth</span><span>Next.js</span><span>NestJS</span><span>Prisma</span>
+                </p>
+              </div>
+              <figure class="case-visual">
+<svg viewBox="0 0 480 360" role="img" aria-label="Fluxo de captação: links rastreáveis por canal levam à landing page do evento, o Google Analytics conectado por OAuth coleta os acessos e o painel cruza acessos e inscrições por link">
+  <g class="v-pop" style="--d:0s">
+    <rect class="v-chip" x="22" y="58" width="112" height="34" rx="17"/><text class="v-mono-s" x="78" y="80" text-anchor="middle">?utm=instagram</text>
+  </g>
+  <g class="v-pop" style="--d:0.12s">
+    <rect class="v-chip" x="22" y="104" width="112" height="34" rx="17"/><text class="v-mono-s" x="78" y="126" text-anchor="middle">?utm=whatsapp</text>
+  </g>
+  <g class="v-pop" style="--d:0.24s">
+    <rect class="v-chip" x="22" y="150" width="112" height="34" rx="17"/><text class="v-mono-s" x="78" y="172" text-anchor="middle">?utm=email</text>
+  </g>
+  <path class="v-flow" d="M138 75 C156 75, 156 121, 172 121"/>
+  <path class="v-flow" d="M138 121 H172"/>
+  <path class="v-flow" d="M138 167 C156 167, 156 121, 172 121"/>
+  <g class="v-pop" style="--d:0.4s">
+    <rect class="v-node" x="176" y="52" width="140" height="142" rx="12"/>
+    <path class="v-track" d="M176 72 H316"/>
+    <circle class="v-line-fill" cx="188" cy="62" r="3"/><circle class="v-line-fill" cx="198" cy="62" r="3"/><circle class="v-line-fill" cx="208" cy="62" r="3"/>
+    <text class="v-kicker" x="190" y="94">LANDING</text>
+    <rect class="v-line-fill" x="190" y="104" width="100" height="8" rx="4"/>
+    <rect class="v-line-fill" x="190" y="118" width="70" height="8" rx="4"/>
+    <rect class="v-chip v-chip-on" x="190" y="146" width="96" height="30" rx="15"/>
+    <text class="v-on" x="238" y="165" text-anchor="middle">inscrever-se</text>
+  </g>
+  <path class="v-flow" d="M320 123 H344"/>
+  <g class="v-pop" style="--d:0.6s">
+    <rect class="v-box" x="348" y="70" width="112" height="106" rx="14"/>
+    <text class="v-kicker" x="362" y="94">ANALYTICS</text>
+    <text class="v-strong" x="362" y="124">OAuth</text>
+    <text class="v-sub" x="362" y="146">por workspace</text>
+    <text class="v-sub" x="362" y="162">acessos · canais</text>
+  </g>
+  <path class="v-flow" d="M404 180 V214"/>
+  <g class="v-pop" style="--d:0.8s">
+    <rect class="v-box" x="22" y="218" width="438" height="114" rx="14"/>
+    <text class="v-kicker" x="40" y="242">MÉTRICAS DE CAPTAÇÃO</text>
+    <text class="v-sub" x="442" y="242" text-anchor="end">acessos → inscrições</text>
+    <text class="v-mono-s" x="40" y="270">instagram</text>
+    <text class="v-mono-s" x="40" y="294">whatsapp</text>
+    <text class="v-mono-s" x="40" y="318">email</text>
+    <g class="v-hbars">
+      <rect x="124" y="261" width="230" height="10" rx="5"/>
+      <rect x="124" y="285" width="300" height="10" rx="5"/>
+      <rect x="124" y="309" width="150" height="10" rx="5"/>
+    </g>
+  </g>
+  <circle class="v-packet" r="4"><animateMotion dur="2.8s" repeatCount="indefinite" path="M138 121 H172 M320 123 H344 M404 180 V214"/></circle>
+  <circle class="v-packet" r="4"><animateMotion dur="2.8s" begin="0.9s" repeatCount="indefinite" path="M138 75 C156 75, 156 121, 172 121"/></circle>
+  <circle class="v-packet" r="4"><animateMotion dur="2.8s" begin="1.8s" repeatCount="indefinite" path="M138 167 C156 167, 156 121, 172 121"/></circle>
+</svg>
+              </figure>
+            </article>
             </div>
             <aside class="case-stage">
               <div class="stage-card">
                 <div class="stage-head">
-                  <span class="stage-count"><b>01</b> / 04</span>
+                  <span class="stage-count"><b>01</b> / <span class="stage-total">05</span></span>
                   <span class="stage-label">Facial na AWS</span>
                 </div>
                 <div class="stage-panels"></div>
-                <div class="stage-progress"><button type="button" aria-label="Ir para o caso 1"><i></i></button><button type="button" aria-label="Ir para o caso 2"><i></i></button><button type="button" aria-label="Ir para o caso 3"><i></i></button><button type="button" aria-label="Ir para o caso 4"><i></i></button></div>
+                <div class="stage-progress"></div>
               </div>
             </aside>
           </div>
@@ -441,59 +519,9 @@
                   Promovido de estagiário. Atuo em squad Scrum numa plataforma
                   de gestão de eventos que tem uma grande cooperativa de
                   crédito como cliente piloto, nos três repositórios (API, web
-                  e app) e na infraestrutura que os sustenta na AWS.
+                  e app) e na infraestrutura que os sustenta na AWS. Os
+                  destaques estão em <a href="#trabalho">O que eu resolvi</a>.
                 </p>
-                <ul>
-                  <li>
-                    Responsável pelos métodos de check-in e check-out:
-                    <strong>NFC, QR Code, manual e reconhecimento facial</strong>,
-                    da API até a tela.
-                  </li>
-                  <li>
-                    Reconhecimento facial migrado para uma
-                    <strong>AWS Lambda em container</strong>, com comparação por
-                    similaridade de cosseno e até 5 rostos por participante.
-                  </li>
-                  <li>
-                    Check-in por QR Code <strong>sem internet</strong>, com
-                    sincronização idempotente que não duplica registros.
-                  </li>
-                  <li>
-                    Adequação à <strong>LGPD</strong> do dado biométrico:
-                    consentimento, revogação com exclusão imediata e job diário
-                    de retenção.
-                  </li>
-                  <li>
-                    Deploy na AWS com <strong>GitHub Actions</strong>,
-                    publicando a imagem da Lambda e os serviços no cluster ECS.
-                  </li>
-                  <li>
-                    Módulos completos de produto: landing page configurável com
-                    pré-visualização em tempo real, links rastreáveis com OAuth
-                    do Google Analytics, métricas de captação, score de leads e
-                    controle de custos.
-                  </li>
-                  <li>
-                    Épico de <strong>Design System</strong>: 16 componentes do
-                    Chakra UI padronizados contra o Figma e tokens semânticos de
-                    cor, com uma skill que entregou uma sprint em 16 horas.
-                  </li>
-                  <li>
-                    Navegação de 7s para 3s (<strong>-57%</strong>) e
-                    carregamento de imagens de ~7s para 2s
-                    (<strong>-71%</strong>) em fluxos críticos.
-                  </li>
-                  <li>
-                    Infraestrutura de passes para Google Wallet e Apple Wallet,
-                    incluindo certificados na conta de desenvolvedor Apple.
-                  </li>
-                  <li>
-                    Automações com Claude Code para o time: lançamento de horas
-                    no Jira e resumos diários. Trabalho com git worktrees,
-                    tocando várias frentes em paralelo sem perder o padrão do
-                    código nem a fidelidade ao design.
-                  </li>
-                </ul>
                 <p class="tags">
                   <span>Next.js</span><span>NestJS</span><span>React Native</span><span>Prisma</span><span>AWS Lambda</span><span>ECS</span><span>GitHub Actions</span><span>Chakra UI</span><span>Claude Code</span>
                 </p>
