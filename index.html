@@ -37,10 +37,28 @@
         if (localStorage.getItem('theme') === 'light')
           document.documentElement.classList.add('light')
       } catch (e) {}
+      // Entrada: toca uma vez por sessão e respeita "reduzir movimento"
+      try {
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        if (reduce || sessionStorage.getItem('intro') === '1')
+          document.documentElement.classList.add('intro-skip')
+        sessionStorage.setItem('intro', '1')
+      } catch (e) {}
     </script>
   </head>
   <body>
     <a class="skip" href="#trabalho">Pular para o conteúdo</a>
+
+    <div class="intro" aria-hidden="true">
+      <div class="intro-inner">
+        <p class="intro-eyebrow">Desenvolvedor Full Stack</p>
+        <p class="intro-name">
+          <span><b>Samuel</b></span>
+          <span><em>Molinari</em></span>
+        </p>
+        <div class="intro-bar"><i></i></div>
+      </div>
+    </div>
 
     <header class="site-header">
       <div class="wrap nav">

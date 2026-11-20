@@ -814,6 +814,137 @@ em {
   color: var(--muted);
 }
 
+/* ---------- Entrada ---------- */
+.intro {
+  display: none;
+}
+.js:not(.intro-skip) .intro {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  animation: intro-out 0.9s cubic-bezier(0.76, 0, 0.24, 1) 1.55s forwards;
+}
+.intro-inner {
+  width: min(86vw, 720px);
+}
+.intro-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0;
+  animation: intro-fade 0.5s ease 0.1s forwards;
+}
+.intro-name {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(3.2rem, 15vw, 7.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  margin: 14px 0 26px;
+}
+.intro-name span {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+}
+.intro-name b,
+.intro-name em {
+  display: block;
+  transform: translateY(110%);
+  animation: intro-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+}
+.intro-name b {
+  font-weight: 800;
+}
+.intro-name em {
+  color: var(--accent);
+  letter-spacing: -0.03em;
+  animation-delay: 0.28s;
+}
+.intro-bar {
+  height: 2px;
+  background: var(--line);
+  overflow: hidden;
+}
+.intro-bar i {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: intro-load 1.1s cubic-bezier(0.65, 0, 0.35, 1) 0.35s forwards;
+}
+
+/* O hero entra em cascata logo depois da cortina subir */
+.js:not(.intro-skip) .hero-text > *,
+.js:not(.intro-skip) .stats {
+  opacity: 0;
+  animation: hero-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.95s forwards;
+}
+.js:not(.intro-skip) .hero-text > :nth-child(2) {
+  animation-delay: 2.03s;
+}
+.js:not(.intro-skip) .hero-text > :nth-child(3) {
+  animation-delay: 2.11s;
+}
+.js:not(.intro-skip) .hero-text > :nth-child(4) {
+  animation-delay: 2.19s;
+}
+.js:not(.intro-skip) .stats {
+  animation-delay: 2.3s;
+}
+.js:not(.intro-skip) .hero-figure {
+  opacity: 0;
+  animation: figure-in 1s cubic-bezier(0.22, 1, 0.36, 1) 1.9s forwards;
+}
+
+@keyframes intro-fade {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes intro-rise {
+  to {
+    transform: none;
+  }
+}
+@keyframes intro-load {
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes intro-out {
+  to {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+}
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes figure-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* ---------- Reveal ---------- */
 .js .reveal {
   opacity: 0;
