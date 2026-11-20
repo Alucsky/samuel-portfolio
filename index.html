@@ -169,7 +169,8 @@
           </header>
 
           <div class="cases">
-            <article class="case reveal">
+            <div class="case-list">
+            <article class="case" data-step="0" data-label="Facial na AWS">
               <span class="case-n">01</span>
               <div class="case-body">
                 <h3>Reconhecimento facial fora do aparelho, dentro da AWS</h3>
@@ -190,9 +191,61 @@
                   <span>AWS Lambda</span><span>ECR</span><span>NestJS</span><span>MediaPipe</span><span>React Native</span>
                 </p>
               </div>
+              <figure class="case-visual">
+<svg viewBox="0 0 480 360" role="img" class="d-facial" aria-label="Fluxo: frames da câmera vão para uma AWS Lambda, que gera um vetor de 512 posições comparado por similaridade de cosseno até confirmar o check-in">
+  <g transform="translate(0 -26)">
+  <g class="v-pop" style="--d:0s">
+    <rect class="v-node" x="22" y="96" width="78" height="58" rx="8"/>
+    <rect class="v-node" x="30" y="112" width="78" height="58" rx="8"/>
+    <rect class="v-node v-node-hi" x="38" y="128" width="78" height="58" rx="8"/>
+    <circle class="v-accent-stroke" cx="77" cy="152" r="13"/>
+    <circle class="v-accent-fill" cx="72" cy="149" r="1.8"/><circle class="v-accent-fill" cx="82" cy="149" r="1.8"/>
+    <path class="v-accent-stroke" d="M71 157 q6 5 12 0"/>
+    <text class="v-label" x="38" y="214">3–5 frames</text>
+    <text class="v-sub" x="38" y="230">JPEG · sem disco</text>
+  </g>
+  <path class="v-flow" d="M124 157 H176"/>
+  <g class="v-pop" style="--d:0.25s">
+    <rect class="v-box" x="180" y="96" width="132" height="122" rx="14"/>
+    <text class="v-kicker" x="196" y="120">AWS LAMBDA</text>
+    <text class="v-strong" x="196" y="146">embedding</text>
+    <text class="v-strong" x="196" y="166">facial</text>
+    <text class="v-sub" x="196" y="200">container · ECR</text>
+  </g>
+  <path class="v-flow" d="M316 157 H352"/>
+  <g class="v-pop" style="--d:0.5s">
+    <g class="v-bars v-eq">
+      <rect x="358" y="128" width="5" height="58" rx="2"/><rect x="367" y="146" width="5" height="40" rx="2"/>
+      <rect x="376" y="118" width="5" height="68" rx="2"/><rect x="385" y="152" width="5" height="34" rx="2"/>
+      <rect x="394" y="136" width="5" height="50" rx="2"/><rect x="403" y="160" width="5" height="26" rx="2"/>
+      <rect x="412" y="124" width="5" height="62" rx="2"/><rect x="421" y="142" width="5" height="44" rx="2"/>
+      <rect x="430" y="156" width="5" height="30" rx="2"/><rect x="439" y="132" width="5" height="54" rx="2"/>
+      <rect x="448" y="148" width="5" height="38" rx="2"/>
+    </g>
+    <text class="v-label" x="358" y="214">vetor 512-d</text>
+  </g>
+  <path class="v-flow" d="M405 236 V262 H330"/>
+  <g class="v-pop" style="--d:0.75s">
+    <rect class="v-chip" x="150" y="244" width="176" height="38" rx="19"/>
+    <text class="v-mono" x="238" y="268" text-anchor="middle">cosseno · quórum</text>
+  </g>
+  <path class="v-flow" d="M146 263 H112"/>
+  <g class="v-pop" style="--d:1s">
+    <rect class="v-chip v-chip-on" x="22" y="244" width="86" height="38" rx="19"/>
+    <text class="v-on" x="65" y="268" text-anchor="middle">✓ check-in</text>
+  </g>
+  <g class="v-pop" style="--d:1.15s">
+    <text class="v-sub" x="22" y="318">até 5 rostos por participante · ~2.000 linhas a menos no cliente</text>
+  </g>
+  <circle class="v-packet" r="4"><animateMotion dur="2.6s" repeatCount="indefinite" path="M124 157 H176 M316 157 H352"/></circle>
+  <circle class="v-packet" r="4"><animateMotion dur="2.6s" begin="1.3s" repeatCount="indefinite" path="M405 236 V262 H330 M146 263 H112"/></circle>
+  <rect class="v-ring" x="22" y="244" width="86" height="38" rx="19"/>
+  </g>
+</svg>
+              </figure>
             </article>
 
-            <article class="case reveal">
+            <article class="case" data-step="1" data-label="Offline-first">
               <span class="case-n">02</span>
               <div class="case-body">
                 <h3>Check-in que funciona sem internet</h3>
@@ -211,9 +264,48 @@
                   <span>React Native</span><span>Expo</span><span>NestJS</span><span>Prisma</span><span>Testes e2e</span>
                 </p>
               </div>
+              <figure class="case-visual">
+<svg viewBox="0 0 480 360" role="img" aria-label="Fluxo: o app guarda check-ins sem conexão numa fila e sincroniza com a API; reenviar o mesmo identificador não cria registro duplicado">
+  <g class="v-pop" style="--d:0s">
+    <rect class="v-node" x="34" y="44" width="124" height="252" rx="20"/>
+    <rect class="v-line-fill" x="78" y="54" width="36" height="5" rx="2.5"/>
+    <path class="v-accent-stroke" d="M58 82 q20 -14 40 0 M64 89 q14 -9 28 0"/>
+    <path class="v-cut" d="M56 96 L100 72"/>
+    <text class="v-sub" x="106" y="90">offline</text>
+  </g>
+  <g class="v-pop" style="--d:0.2s"><rect class="v-item v-queue" style="--q:0s" x="50" y="114" width="92" height="34" rx="8"/><text class="v-mono-s" x="60" y="135">QR · id a1f9</text></g>
+  <g class="v-pop" style="--d:0.35s"><rect class="v-item v-queue" style="--q:0.8s" x="50" y="156" width="92" height="34" rx="8"/><text class="v-mono-s" x="60" y="177">QR · id 7c02</text></g>
+  <g class="v-pop" style="--d:0.5s"><rect class="v-item v-queue" style="--q:1.6s" x="50" y="198" width="92" height="34" rx="8"/><text class="v-mono-s" x="60" y="219">QR · id e41b</text></g>
+  <g class="v-pop" style="--d:0.6s"><text class="v-label" x="50" y="266">fila local</text></g>
+  <path class="v-flow" d="M162 170 H222"/>
+  <g class="v-pop" style="--d:0.7s"><text class="v-kicker" x="168" y="160">SYNC</text></g>
+  <g class="v-pop" style="--d:0.8s">
+    <rect class="v-box" x="226" y="122" width="146" height="96" rx="14"/>
+    <text class="v-kicker" x="242" y="146">API</text>
+    <text class="v-strong" x="242" y="172">idempotente</text>
+    <text class="v-sub" x="242" y="198">por clientId</text>
+  </g>
+  <path class="v-flow" d="M376 170 H398"/>
+  <g class="v-pop" style="--d:1s">
+    <path class="v-node" d="M402 132 V200 a26 9 0 0 0 52 0 V132"/>
+    <ellipse class="v-node" cx="428" cy="132" rx="26" ry="9"/>
+    <path class="v-accent-stroke v-db-fill" d="M408 178 a20 6 0 0 0 40 0"/>
+    <text class="v-label" x="428" y="236" text-anchor="middle">1 registro</text>
+  </g>
+  <path class="v-loop" d="M300 222 C300 286, 170 290, 112 244"/>
+  <path class="v-loop-head" d="M120 240 l-9 3 l3 9"/>
+  <g class="v-pop" style="--d:1.1s"><text class="v-sub" x="196" y="288">mesmo clientId</text></g>
+  <g class="v-pop" style="--d:1.2s">
+    <rect class="v-chip v-chip-on" x="196" y="300" width="200" height="34" rx="17"/>
+    <text class="v-on" x="296" y="322" text-anchor="middle">reenvio → 0 duplicados</text>
+  </g>
+  <circle class="v-packet" r="4"><animateMotion dur="2.4s" repeatCount="indefinite" path="M162 170 H222 M376 170 H398"/></circle>
+  <circle class="v-packet" r="4"><animateMotion dur="2.4s" begin="0.8s" repeatCount="indefinite" path="M162 170 H222 M376 170 H398"/></circle>
+</svg>
+              </figure>
             </article>
 
-            <article class="case reveal">
+            <article class="case" data-step="2" data-label="LGPD">
               <span class="case-n">03</span>
               <div class="case-body">
                 <h3>Biometria tratada como dado sensível</h3>
@@ -228,9 +320,47 @@
                   <span>LGPD</span><span>NestJS</span><span>Jobs agendados</span><span>Cognito</span>
                 </p>
               </div>
+              <figure class="case-visual">
+<svg viewBox="0 0 480 360" role="img" aria-label="Linha do tempo do dado biométrico: consentimento, vetor guardado, revogação ou prazo de retenção e exclusão; imagens nunca tocam disco, armazenamento ou log">
+  <g class="v-pop" style="--d:0s">
+    <rect class="v-chip" x="22" y="34" width="132" height="34" rx="17"/><text class="v-mono" x="88" y="56" text-anchor="middle">disco</text><path class="v-cut" d="M44 51 H132"/>
+    <rect class="v-chip" x="174" y="34" width="132" height="34" rx="17"/><text class="v-mono" x="240" y="56" text-anchor="middle">S3</text><path class="v-cut" d="M196 51 H284"/>
+    <rect class="v-chip" x="326" y="34" width="132" height="34" rx="17"/><text class="v-mono" x="392" y="56" text-anchor="middle">log</text><path class="v-cut" d="M348 51 H436"/>
+    <text class="v-sub" x="22" y="92">a imagem do rosto não fica em lugar nenhum</text>
+  </g>
+  <path class="v-track" d="M72 186 H410"/>
+  <path class="v-flow" d="M72 186 H410"/>
+  <circle class="v-packet" r="5"><animateMotion dur="3.2s" repeatCount="indefinite" path="M72 186 H410"/></circle>
+  <g class="v-pop" style="--d:0.25s">
+    <circle class="v-dot v-dot-on" cx="72" cy="186" r="16"/><path class="v-on-stroke" d="M65 186 l5 5 l9 -10"/>
+    <text class="v-label" x="72" y="226" text-anchor="middle">consentimento</text>
+  </g>
+  <g class="v-pop" style="--d:0.5s">
+    <circle class="v-dot" cx="186" cy="186" r="16"/>
+    <rect class="v-accent-stroke" x="179" y="184" width="14" height="10" rx="2"/><path class="v-accent-stroke" d="M182 184 v-4 a4 4 0 0 1 8 0 v4"/>
+    <text class="v-label" x="186" y="226" text-anchor="middle">vetor guardado</text>
+  </g>
+  <g class="v-pop" style="--d:0.75s">
+    <circle class="v-dot" cx="302" cy="186" r="16"/><path class="v-accent-stroke" d="M296 180 l12 12 M308 180 l-12 12"/>
+    <text class="v-label" x="302" y="226" text-anchor="middle">revogação</text>
+  </g>
+  <g class="v-pop" style="--d:1s">
+    <circle class="v-dot v-dot-on" cx="410" cy="186" r="16"/>
+    <path class="v-on-stroke" d="M403 181 h14 M405 181 v11 h10 v-11 M408 178 h4"/>
+    <text class="v-label" x="410" y="226" text-anchor="middle">exclusão</text>
+  </g>
+  <g class="v-pop" style="--d:1.2s">
+    <rect class="v-box" x="248" y="262" width="210" height="64" rx="14"/>
+    <circle class="v-accent-stroke" cx="276" cy="294" r="12"/><path class="v-accent-stroke" d="M276 287 v7 l5 3"/>
+    <text class="v-strong" x="298" y="290">job diário</text>
+    <text class="v-sub" x="298" y="310">apaga vetores fora do prazo</text>
+    <path class="v-loop" d="M380 258 C400 244, 410 236, 410 210"/>
+  </g>
+</svg>
+              </figure>
             </article>
 
-            <article class="case reveal">
+            <article class="case" data-step="3" data-label="Skill de Design System">
               <span class="case-n">04</span>
               <div class="case-body">
                 <h3>Uma sprint de Design System entregue em 16 horas</h3>
@@ -254,7 +384,40 @@
                   <span>Claude Code</span><span>Figma</span><span>Jira</span><span>Chakra UI</span><span>Next.js</span>
                 </p>
               </div>
+              <figure class="case-visual">
+<svg viewBox="0 0 480 360" role="img" aria-label="Pipeline da skill no Claude Code: card do Jira, medidas do Figma, dúvidas para o designer, código do componente e página de comparação com o Figma">
+  <circle class="v-orbit" cx="240" cy="182" r="122"/>
+  
+  <g class="v-pop" style="--d:0s">
+    <circle class="v-box" cx="240" cy="182" r="58"/>
+    <text class="v-kicker" x="240" y="172" text-anchor="middle">SKILL</text>
+    <text class="v-strong v-strong-s" x="240" y="194" text-anchor="middle">Claude Code</text>
+  </g>
+  <g class="v-pop" style="--d:0.2s"><rect class="v-step v-chip" x="194" y="42" width="92" height="36" rx="18" style="--s:0s"/><text class="v-mono" x="240" y="65" text-anchor="middle">card Jira</text></g>
+  <g class="v-pop" style="--d:0.4s"><rect class="v-step v-chip" x="322" y="118" width="112" height="36" rx="18" style="--s:0.9s"/><text class="v-mono" x="378" y="141" text-anchor="middle">medidas Figma</text></g>
+  <g class="v-pop" style="--d:0.6s"><rect class="v-step v-chip" x="280" y="262" width="138" height="36" rx="18" style="--s:1.8s"/><text class="v-mono" x="349" y="285" text-anchor="middle">dúvidas → design</text></g>
+  <g class="v-pop" style="--d:0.8s"><rect class="v-step v-chip" x="72" y="262" width="118" height="36" rx="18" style="--s:2.7s"/><text class="v-mono" x="131" y="285" text-anchor="middle">componente</text></g>
+  <g class="v-pop" style="--d:1s"><rect class="v-step v-chip v-chip-on" x="40" y="118" width="124" height="36" rx="18" style="--s:3.6s"/><text class="v-on" x="102" y="141" text-anchor="middle">diff vs Figma</text></g>
+  <g class="v-pop" style="--d:1.2s">
+    <text class="v-big" x="458" y="58" text-anchor="end">16 h</text>
+    <text class="v-sub" x="458" y="78" text-anchor="end">1 sprint · 1 pessoa</text>
+    <text class="v-sub" x="458" y="334" text-anchor="end">0 comentários de revisão</text>
+  </g>
+  <circle class="v-packet" r="5"><animateMotion dur="4.5s" repeatCount="indefinite" path="M240 60 A122 122 0 1 1 239.9 60"/></circle>
+</svg>
+              </figure>
             </article>
+            </div>
+            <aside class="case-stage">
+              <div class="stage-card">
+                <div class="stage-head">
+                  <span class="stage-count"><b>01</b> / 04</span>
+                  <span class="stage-label">Facial na AWS</span>
+                </div>
+                <div class="stage-panels"></div>
+                <div class="stage-progress"><button type="button" aria-label="Ir para o caso 1"><i></i></button><button type="button" aria-label="Ir para o caso 2"><i></i></button><button type="button" aria-label="Ir para o caso 3"><i></i></button><button type="button" aria-label="Ir para o caso 4"><i></i></button></div>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
