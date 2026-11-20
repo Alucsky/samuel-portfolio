@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currículo | Samuel Molinari</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @page {
+        size: A4;
+        margin: 14mm 17mm;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        background: #eceef1;
+      }
+      body {
+        font-family: 'Inter', Arial, sans-serif;
+        font-size: 10pt;
+        line-height: 1.4;
+        color: #222;
+        background: #fff;
+        max-width: 210mm;
+        margin: 24px auto;
+        padding: 16mm 18mm;
+        box-shadow: 0 2px 24px rgba(0, 0, 0, 0.08);
+      }
+      a {
+        color: #0b57d0;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid #cfcfcf;
+        margin-bottom: 16px;
+      }
+      h1 {
+        font-family: 'Libre Baskerville', Georgia, serif;
+        font-size: 25pt;
+        line-height: 1.15;
+        color: #2b2b2b;
+      }
+      .title {
+        color: #888;
+        font-size: 12.5pt;
+        margin-top: 8px;
+      }
+      .contact {
+        text-align: right;
+        font-size: 10.6pt;
+        line-height: 1.5;
+        white-space: nowrap;
+      }
+      h2 {
+        font-family: 'Libre Baskerville', Georgia, serif;
+        font-size: 13.5pt;
+        color: #2b2b2b;
+        padding-bottom: 7px;
+        border-bottom: 1px solid #cfcfcf;
+        margin: 20px 0 12px;
+        break-after: avoid;
+      }
+      ul {
+        padding-left: 22px;
+      }
+      li {
+        margin-bottom: 5px;
+      }
+      .skills {
+        display: grid;
+        grid-template-columns: 1.15fr 1fr 1fr;
+        column-gap: 44px;
+        row-gap: 7px;
+      }
+      .skills li {
+        margin-bottom: 0;
+      }
+      .job-head {
+        list-style: disc;
+        margin-top: 12px;
+        break-after: avoid;
+      }
+      .job-head li {
+        margin-bottom: 0;
+      }
+      .job-intro {
+        margin: 5px 0;
+      }
+      .label {
+        font-style: italic;
+        margin: 5px 0 7px;
+        break-after: avoid;
+      }
+      .sub {
+        font-weight: 700;
+        margin: 12px 0 7px;
+      }
+      .toolbar {
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        display: flex;
+        gap: 8px;
+      }
+      .toolbar a,
+      .toolbar button {
+        font: 600 13px 'Inter', sans-serif;
+        padding: 9px 14px;
+        border-radius: 999px;
+        border: 1px solid #222;
+        background: #222;
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .toolbar a {
+        background: #fff;
+        color: #222;
+      }
+      @media (max-width: 720px) {
+        body {
+          margin: 0;
+          padding: 72px 20px 32px;
+          box-shadow: none;
+        }
+        header {
+          flex-direction: column;
+        }
+        .contact {
+          text-align: left;
+        }
+        .skills {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media print {
+        html {
+          background: #fff;
+        }
+        body {
+          margin: 0;
+          padding: 0;
+          max-width: none;
+          box-shadow: none;
+        }
+        .toolbar {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <a href="index.html">Portfólio</a>
+      <a href="assets/curriculo-samuel-molinari.pdf" download>Baixar PDF</a>
+    </div>
+
+    <header>
+      <div>
+        <h1>Samuel Molinari</h1>
+        <p class="title">Desenvolvedor Full Stack</p>
+      </div>
+      <div class="contact">
+        Dois Vizinhos, PR<br />
+        (46) 9925-7166<br />
+        samuelmolinari8@gmail.com<br />
+        <a href="https://www.linkedin.com/in/samuel-molinari">linkedin.com/in/samuel-molinari</a><br />
+        <a href="https://github.com/Alucsky">github.com/Alucsky</a><br />
+        <a href="https://alucsky.github.io/samuel-portfolio">alucsky.github.io/samuel-portfolio</a>
+      </div>
+    </header>
+
+    <p>
+      Desenvolvedor Full Stack apaixonado por transformar ideias em produtos
+      reais, unindo curiosidade técnica a uma visão de produto. Atuo de ponta a
+      ponta, do app mobile à infraestrutura na AWS, com entregas recentes em
+      reconhecimento facial, operação offline e adequação à LGPD. Aplico
+      Inteligência Artificial no dia a dia do desenvolvimento de software para
+      acelerar entregas, sempre mantendo a governança e as decisões técnicas
+      comigo. Sou movido por aprendizado contínuo, recentemente me certifiquei
+      como AWS Certified Cloud Practitioner, e busco novas oportunidades para
+      crescer entregando produtos de alto impacto.
+    </p>
+
+    <h2>Habilidades</h2>
+    <ul class="skills">
+      <li>Desenvolvimento assistido por IA</li>
+      <li>Next.js</li>
+      <li>Comunicação</li>
+      <li>AWS (Lambda, ECS, CloudWatch)</li>
+      <li>NestJS</li>
+      <li>Adaptabilidade</li>
+      <li>Scrum &amp; Lean Inception</li>
+      <li>React Native</li>
+      <li>Proatividade</li>
+    </ul>
+
+    <h2>Experiência de trabalho</h2>
+
+    <ul class="job-head">
+      <li>
+        <strong>Tog Lab</strong> Jan/2026 – Atual<br />
+        <strong>Desenvolvedor Full Stack</strong>
+      </li>
+    </ul>
+    <p class="job-intro">
+      Atuo em squad estruturada com metodologias ágeis, desenvolvendo e
+      otimizando uma plataforma de gestão de eventos que tem uma grande
+      cooperativa de crédito como cliente piloto, usada por ela para gerir
+      eventos internos e com potencial de virar um produto secundário da
+      empresa. Trabalho nos três repositórios do produto (API, web e app) e na
+      infraestrutura que os sustenta na AWS. Também crio automações com Claude
+      Code para otimizar o dia a dia da equipe.
+    </p>
+    <p class="label">Principais projetos / tarefas</p>
+    <ul>
+      <li>
+        Participação em squad estruturada com Scrum, atuando em daily
+        stand-ups, sprint cycles e Lean Inception para definição de escopo e
+        alinhamento de produto;
+      </li>
+      <li>
+        Desenvolvimento e responsabilidade pelos métodos de check-in e
+        check-out de participantes: por NFC, QR Code, manual e reconhecimento
+        facial, na API, na web e no app;
+      </li>
+      <li>
+        Reconhecimento facial de ponta a ponta: migração da extração do
+        embedding facial (vetor de 512 posições) dos clientes para o backend,
+        com uma AWS Lambda em container, eliminando cerca de 2.000 linhas de
+        pipeline de visão duplicadas entre web e mobile e a dependência do
+        hardware do operador;
+      </li>
+      <li>
+        Comparação de rostos por similaridade de cosseno, com quórum entre
+        frames capturados e até 5 rostos por participante, substituindo o mais
+        destoante quando o limite é atingido;
+      </li>
+      <li>
+        Adequação à LGPD do dado biométrico: consentimento do participante,
+        revogação com exclusão imediata dos vetores faciais e job diário de
+        retenção;
+      </li>
+      <li>
+        Check-in por QR Code sem conexão no app, com sincronização idempotente
+        por identificador gerado no dispositivo, evitando registros duplicados
+        em reenvios;
+      </li>
+      <li>
+        Manutenção do deploy na AWS com GitHub Actions, publicando a imagem da
+        Lambda e os serviços no cluster ECS; diagnóstico por CloudWatch e
+        correção de uma falha de memória na task de seed que bloqueava o deploy
+        em staging;
+      </li>
+      <li>
+        Correção de uma falha crítica de autorização na API, que liberava
+        ações a usuários autenticados sem a permissão exigida (guard do NestJS
+        e claims do Cognito);
+      </li>
+      <li>
+        Condução do épico de Design System, padronizando 16 recipes de
+        componentes do Chakra UI contra o Figma e criando os tokens semânticos
+        de cores do tema;
+      </li>
+      <li>
+        Entrega de módulos de produto completos (API e interface): landing page
+        do evento configurável com pré-visualização em tempo real, links
+        rastreáveis com integração OAuth ao Google Analytics, métricas de
+        captação, score de leads e controle de custos do evento;
+      </li>
+      <li>
+        Configuração de infraestrutura para emissão de passes de evento no
+        Google Wallet e Apple Wallet, incluindo geração de certificados na
+        conta de desenvolvedor Apple, permitindo acesso ao evento direto pelo
+        celular (Android e iPhone);
+      </li>
+      <li>
+        Otimização de performance de navegação, reduzindo tempos de resposta de
+        7s para 3s (~57% de melhora) em fluxos críticos, e do carregamento de
+        imagens, de ~7s para 2s (~71% de melhora);
+      </li>
+      <li>
+        Criação de slash commands e skills no Claude Code para automatizar o
+        lançamento de horas no Jira, a geração de resumos diários e a
+        padronização de componentes, além da centralização da configuração de
+        IA do time em um meta-repositório.
+      </li>
+    </ul>
+
+    <ul class="job-head">
+      <li>
+        <strong>Tog Lab</strong> Fev/2025 – Jan/2026<br />
+        <strong>Estagiário de Desenvolvimento de Software</strong>
+      </li>
+    </ul>
+    <p class="job-intro">
+      Atuei no desenvolvimento de um programa interno de gestão para pequenos e
+      médios produtores rurais administrarem suas fazendas, meu primeiro
+      projeto profissional, onde construí as bases de NestJS e Next.js.
+    </p>
+    <p class="label">Principais projetos / tarefas</p>
+    <ul>
+      <li>
+        Aplicação dos princípios de SOLID e de práticas de TDD desde as
+        primeiras entregas, com codificação ágil e manual, em um período
+        anterior à adoção de fluxos de desenvolvimento assistidos por IA;
+      </li>
+      <li>
+        Desenvolvimento focado em Mobile com React Native e Expo, seguindo boas
+        práticas de usabilidade em produção;
+      </li>
+      <li>
+        Integração de APIs com NestJS e Prisma ORM, além de apoio em automação
+        de deploy e pipelines de CI/CD;
+      </li>
+      <li>
+        Integração com APIs externas como a OpenWeather, exibindo aos
+        produtores temperatura atual, mínima e máxima, além da previsão para os
+        próximos dias;
+      </li>
+      <li>
+        Contribuição em processos de benchmarking, testes de usabilidade e
+        descoberta de produto para definição de MVPs, participando da ideação
+        do projeto e de workshops de design thinking com foco no usuário final;
+      </li>
+      <li>
+        Acompanhamento de deploys no backend (AWS) e publicação interna no
+        Google Play e na Apple App Store.
+      </li>
+    </ul>
+
+    <ul class="job-head">
+      <li>
+        <strong>CISS S.A.</strong> Ago/2024 – Dez/2024<br />
+        <strong>Desenvolvedor de Software (Trainee)</strong>
+      </li>
+    </ul>
+    <p class="job-intro">
+      Atuei no desenvolvimento de interfaces para software embarcado, com foco
+      em detecção automática de hardware e testes de sistema.
+    </p>
+    <p class="label">Principais projetos / tarefas</p>
+    <ul>
+      <li>
+        Desenvolvimento de interfaces (UI) para software embarcado v2.0
+        utilizando C++, Qt Creator e QML;
+      </li>
+      <li>
+        Criação de lógica para detecção automática de impressoras, testes de
+        sistema e emissão de cupons fiscais simulados;
+      </li>
+      <li>
+        Atuação no setor do CISSBox, PDV compacto baseado em Raspberry Pi que
+        já ultrapassou 10 mil unidades vendidas em operação no Brasil e em
+        outros países da América Latina, consumindo até 90% menos energia que
+        um computador convencional.
+      </li>
+    </ul>
+
+    <h2>Projetos independentes</h2>
+    <ul>
+      <li>
+        Sites em Next.js publicados na Vercel para negócios e instituições
+        locais, com versões em português, inglês e espanhol. Disponíveis no
+        portfólio:
+        <a href="https://alucsky.github.io/samuel-portfolio">alucsky.github.io/samuel-portfolio</a>;
+      </li>
+      <li>
+        <strong>mcp-demo-server</strong> – servidor MCP (Model Context
+        Protocol) em TypeScript, com testes automatizados e validação de schema
+        com Zod;
+      </li>
+      <li>
+        <strong>android-hce-nfc-tester</strong> – app React Native (Expo) que
+        emula tags NFC por Host Card Emulation, para testar leitura NFC sem
+        tags físicas.
+      </li>
+    </ul>
+
+    <h2>Educação</h2>
+    <ul>
+      <li>
+        Universidade Tecnológica Federal do Paraná – Engenharia de Software –
+        2026 – 2029 (em andamento).
+      </li>
+      <li>
+        Técnico em Administração Integrado ao Ensino Médio – Concluído em 2025.
+      </li>
+    </ul>
+    <p class="sub">Educação adicional e certificados</p>
+    <ul>
+      <li>
+        AWS Certified Cloud Practitioner (CLF-C02) – Amazon Web Services,
+        Ago/2026.
+      </li>
+      <li>Rocketseat – cursos de React Native, NestJS e Next.js, 2025.</li>
+      <li>
+        Alura – curso de C++ avançado, com threads e funções lambda, 2024.
+      </li>
+      <li>
+        Aprender &amp; Crescer (Sudotec) – Node.js, TypeScript e Tailwind CSS,
+        2024.
+      </li>
+      <li>
+        Startup Weekend Dois Vizinhos – Techstars (2024): formação e liderança
+        de equipe até o pitch final.
+      </li>
+    </ul>
+
+    <h2>Habilidades Gerais</h2>
+    <p>
+      <strong>Habilidades de linguagem:</strong> Português – Nativo; Inglês –
+      B1;
+    </p>
+    <p style="margin-top: 8px">
+      <strong>Outras habilidades:</strong> TypeScript, JavaScript, Node.js,
+      NestJS, Express.js, Prisma ORM, SQL, Next.js, React, React Native, Expo,
+      React hooks, Context API, Chakra UI, Tailwind CSS, SCSS, AWS (Lambda,
+      ECS, ECR, CloudWatch, Cognito), Docker, GitHub Actions, CI/CD, Vercel,
+      Testes de software, TDD, Jest, testes e2e, Swagger API, JWT, LGPD,
+      reconhecimento facial (MediaPipe, embeddings), NFC, Google Analytics,
+      PostHog, Git, GitHub, GitLab, Bitbucket, Jira, Scrum, Lean Inception,
+      C++, Qt Creator, QML, Python, MCP (Model Context Protocol), Prompt
+      Engineering, Desenvolvimento assistido por IA (Claude Code, OpenCode),
+      FDD, ADR, Trabalho em equipe.
+    </p>
+  </body>
+</html>

@@ -3,607 +3,491 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <title>Samuel Molinari | Desenvolvedor Full Stack</title>
+    <meta
+      name="description"
+      content="Desenvolvedor Full Stack. Do app mobile à infraestrutura na AWS: reconhecimento facial, operação offline e produtos web com Next.js, NestJS e React Native."
+    />
+    <meta property="og:title" content="Samuel Molinari | Desenvolvedor Full Stack" />
+    <meta
+      property="og:description"
+      content="Do app mobile à infraestrutura na AWS: reconhecimento facial, operação offline e produtos web."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0b0d10" />
     <link rel="icon" type="image/png" href="assets/favicon.png" />
 
-    <title>Samuel Molinari | Developer</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
     <link rel="stylesheet" href="style.css" />
+    <script>
+      document.documentElement.classList.add('js')
+      try {
+        if (localStorage.getItem('theme') === 'light')
+          document.documentElement.classList.add('light')
+      } catch (e) {}
+    </script>
   </head>
   <body>
-    <header>
-      <div class="container nav-wrapper">
-        <div class="logo">Dev<span>Samuel</span></div>
-        <div class="nav-right">
-          <button class="theme-toggle" id="theme-btn">
-            <i class="fas fa-moon"></i>
+    <a class="skip" href="#trabalho">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="wrap nav">
+        <a class="brand" href="#home" aria-label="Início">
+          samuel<span>.molinari</span>
+        </a>
+        <nav class="nav-links" aria-label="Seções">
+          <a href="#trabalho">Trabalho</a>
+          <a href="#jornada">Jornada</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#formacao">Formação</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="theme-toggle" id="theme-btn" aria-label="Alternar tema claro e escuro">
+            <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+            </svg>
+            <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4.5" />
+              <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" />
+            </svg>
           </button>
-          <a
-            href="https://wa.me/554699257166"
-            target="_blank"
-            class="nav-contact"
-            >Contato</a
-          >
+          <a class="btn btn-small" href="curriculo.html">Currículo</a>
         </div>
       </div>
-      <div class="nav-wrapper">
-       </div>
-    
-    <div class="scroll-progress"></div>
-</header>
+      <div class="scroll-progress" aria-hidden="true"></div>
     </header>
 
-    <section id="home">
-      <div class="container hero-wrapper">
-        <div class="hero-text">
-          <h3>Software Developer</h3>
-          <h1>
-            Samuel <br />
-            <span class="outline-text">Molinari</span>
-          </h1>
-          <p>
-            Desenvolvedor Fullstack focado em criar interfaces modernas e
-            experiências de alta performance seja no mobile ou na web.
-          </p>
-        </div>
-
-        <div class="hero-video">
-          <video autoplay loop muted playsinline>
-            <source src="assets/samuel-coding.webm" type="video/webm" />
-            Seu navegador não suporta vídeos.
-          </video>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" style="padding: 80px 0">
-      <div class="container">
-        <h2 class="section-title">Minha Jornada</h2>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="exp-header">
-              <div>
-                <h3 class="role">Full Stack Developer</h3>
-                <span class="company">Tog Lab • Remoto</span>
-              </div>
-              <span class="date">Jan 2026 - Presente</span>
-            </div>
-            <div class="exp-content">
-              <ul>
-                <li>
-                  Desenvolvimento e otimização de uma plataforma de gestão de
-                  eventos usada por uma grande cooperativa de crédito, com
-                  <strong>Next.js</strong>, <strong>Chakra UI</strong> e
-                  <strong>NestJS</strong>.
-                </li>
-                <li>
-                  Métodos de check-in de participantes por <strong>NFC</strong>,
-                  manual e reconhecimento facial, além de integração com
-                  sistemas de <strong>CRM</strong>.
-                </li>
-                <li>
-                  Redução de 57% no tempo de resposta de navegação e 71% no
-                  carregamento de imagens em fluxos críticos.
-                </li>
-                <li>
-                  Criação de automações com <strong>Claude Code</strong> para o
-                  time: lançamento de horas no Jira e resumos diários de
-                  atividades.
-                </li>
-              </ul>
-              <div class="tags">
-                <span class="tag">Next.js</span>
-                <span class="tag">NestJS</span>
-                <span class="tag">Chakra UI</span>
-                <span class="tag">Claude Code</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="exp-header">
-              <div>
-                <h3 class="role">Estagiário de Desenvolvimento de Software</h3>
-                <span class="company">Tog Lab • Remoto</span>
-              </div>
-              <span class="date">Fev 2025 - Jan 2026</span>
-            </div>
-            <div class="exp-content">
-              <ul>
-                <li>
-                  Desenvolvimento do <strong>OpenTog</strong>, plataforma de
-                  gestão para pequenos e médios produtores rurais — meu
-                  primeiro projeto profissional, onde construí as bases de
-                  <strong>NestJS</strong> e <strong>Next.js</strong>.
-                </li>
-                <li>
-                  Aplicação de <strong>SOLID</strong> e <strong>TDD</strong>
-                  desde as primeiras entregas.
-                </li>
-                <li>
-                  Mobile com <strong>React Native</strong> e
-                  <strong>Expo</strong>, integração de APIs com NestJS e
-                  Prisma ORM, deploy AWS e publicação nas lojas.
-                </li>
-                <li>
-                  Formação contínua pela <strong>Rocketseat</strong>: React
-                  Native, NestJS, Next.js e configuração de ambiente.
-                </li>
-              </ul>
-              <div class="tags">
-                <span class="tag">React Native</span>
-                <span class="tag">NestJS</span>
-                <span class="tag">Prisma ORM</span>
-                <span class="tag">AWS</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="exp-header">
-              <div>
-                <h3 class="role">Full Stack Developer Trainee</h3>
-                <span class="company">CISS S.A. • Presencial</span>
-              </div>
-              <span class="date">Ago 2024 - Dez 2024</span>
-            </div>
-            <div class="exp-content">
-              <ul>
-                <li>
-                  Sistemas embarcados com <strong>C++</strong> e
-                  <strong>Qt Creator/QML</strong>.
-                </li>
-                <li>
-                  Implementação de lógica para conectividade e emissão de notas
-                  fiscais.
-                </li>
-                <li>Colaboração via GitHub e metodologias ágeis.</li>
-                <li>
-                  Aprofundamento técnico em <strong>C++ avançado</strong> via
-                  curso da Alura: threads e funções lambda.
-                </li>
-              </ul>
-              <div class="tags">
-                <span class="tag">C++</span>
-                <span class="tag">Qt Creator</span>
-                <span class="tag">Embedded</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      id="education"
-      style="padding: 80px 0; background: rgba(0, 210, 255, 0.02)"
-    >
-      <div class="container">
-        <h2 class="section-title">Formação Acadêmica</h2>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="exp-header">
-              <div>
-                <h3 class="role">Engenharia de Software</h3>
-                <span class="company"
-                  >UTFPR - Universidade Tecnológica Federal do Paraná</span
-                >
-              </div>
-              <span class="date">Início Mar 2026</span>
-            </div>
-            <div class="exp-content">
-              <p
-                style="
-                  color: var(--text-muted);
-                  font-size: 0.9rem;
-                  margin-bottom: 10px;
-                "
-              >
-                Bacharelado focado na ciência da computação aplicada e
-                arquitetura de grandes sistemas.
-              </p>
-              <ul>
-                <li>
-                  Foco futuro em <strong>Arquitetura de Software</strong>,
-                  Design Patterns e Algoritmos Avançados.
-                </li>
-                <li>
-                  Engenharia de dados e metodologias para construção de software
-                  escalável e de alta disponibilidade.
-                </li>
-              </ul>
-              <div class="tags">
-                <span class="tag">Bacharelado</span>
-                <span class="tag">Engenharia</span>
-                <span class="tag">Arquitetura</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="exp-header">
-              <div>
-                <h3 class="role">Análise e Desenvolvimento de Sistemas</h3>
-                <span class="company">SENAI</span>
-              </div>
-              <span class="date"
-                >1600h • Base Técnica Consolidada - Não concluido</span
-              >
-            </div>
-            <div class="exp-content">
-              <p
-                style="
-                  color: var(--text-muted);
-                  font-size: 0.9rem;
-                  margin-bottom: 10px;
-                "
-              >
-                Curso de longa duração com forte viés prático que fundamentou
-                minha carreira técnica.
-                <em style="font-size: 0.8rem; opacity: 0.7"
-                  >(Transição estratégica para uma vaga de emprego)</em
-                >
-              </p>
-              <ul>
-                <li>Domínio de <strong>Lógica de Programação</strong></li>
-                <li>
-                  Modelagem de Banco de Dados Relacional e ciclo de vida de
-                  desenvolvimento de software (SDLC).
-                </li>
-              </ul>
-              <div class="tags">
-                <span class="tag">C</span>
-                <span class="tag">C++</span>
-                <span class="tag">SQL</span>
-                <span class="tag">Lógica</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="exp-header">
-              <div>
-                <h3 class="role">Inglês para Profissionais de Tech</h3>
-                <span class="company"
-                  >Times Idiomas (Atual) • Fisk (Egresso)</span
-                >
-              </div>
-              <span class="date">Intermediário</span>
-            </div>
-            <div class="exp-content">
-              <p
-                style="
-                  color: var(--text-muted);
-                  font-size: 0.9rem;
-                  margin-bottom: 10px;
-                "
-              >
-                Foco total na fluência conversacional para atuação em times
-                globais e consumo de conteúdo técnico nativo.
-              </p>
-              <ul>
-                <li>
-                  Leitura fluida de documentações técnicas e artigos de
-                  engenharia.
-                </li>
-                <li>
-                  Evolução ativa da conversação (Speaking/Listening) na Times
-                  Idiomas (Metodologia dinâmica).
-                </li>
-                <li>
-                  Base gramatical sólida construída durante o curso na Fisk.
-                </li>
-              </ul>
-              <div class="tags">
-                <span class="tag">English</span>
-                <span class="tag">Technical Reading</span>
-                <span class="tag">Global Communication</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="exp-header">
-              <div>
-                <h3 class="role">Programação Aprender & Crescer</h3>
-                <span class="company">Sudotec</span>
-              </div>
-              <span class="date">600h • Intensivo</span>
-            </div>
-            <div class="exp-content">
-              <p
-                style="
-                  color: var(--text-muted);
-                  font-size: 0.9rem;
-                  margin-bottom: 10px;
-                "
-              >
-                O ponto de partida. Um bootcamp intensivo de 600 horas que
-                despertou a paixão pela resolução de problemas.
-              </p>
-              <ul>
-                <li>
-                  Imersão em lógica computacional e primeiros projetos práticos.
-                </li>
-                <li>
-                  Desenvolvimento de soft skills essenciais: trabalho em equipe
-                  e resiliência na depuração de código.
-                </li>
-              </ul>
-              <div class="tags">
-                <span class="tag">Bootcamp</span>
-                <span class="tag">Fundamentos</span>
-                <span class="tag">Primeiro contato com times</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="exp-header">
-              <div>
-                <h3 class="role">Ensino Médio Técnico em Administração</h3>
-                <span class="company">Colégio Estadual Dois Vizinhos</span>
-              </div>
-              <span class="date">3 600h • Concluído</span>
-            </div>
-            <div class="exp-content">
-              <p style="color: var(--text-muted); font-size: 0.9rem">
-                Formação que trouxe a visão de negócios necessária para entender
-                as regras de negócio por trás do código.
-              </p>
-              <div class="tags" style="margin-top: 10px">
-                <span class="tag">Gestão</span>
-                <span class="tag">Processos</span>
-                <span class="tag">Visão de Negócio</span>
-                <span class="tag">Marketing</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" style="padding: 80px 0;">
-      <div class="container">
-        <h2 class="section-title">Tech Stack</h2>
-        
-        <div class="skills-grid">
-          <div class="skill-card">
-            <div class="icon-box">
-              <i class="fab fa-react"></i>
-            </div>
-            <h3>Mobile & Front</h3>
-            <p>Criação de interfaces nativas e web com foco em performance.</p>
-            <div class="skill-tags">
-              <span>React Native</span>
-              <span>React</span>
-              <span>Expo</span>
-              <span>Next.js</span>
-              <span>TypeScript</span>
-            </div>
-          </div>
-
-          <div class="skill-card">
-            <div class="icon-box">
-              <i class="fas fa-server"></i>
-            </div>
-            <h3>Backend & Cloud</h3>
-            <p>Arquitetura escalável, APIs robustas e infraestrutura em nuvem.</p>
-            <div class="skill-tags">
-              <span>NestJS</span>
-              <span>Prisma ORM</span>
-              <span>Node.js</span>
-              <span>AWS</span>
-            </div>
-          </div>
-
-          <div class="skill-card">
-            <div class="icon-box">
-              <i class="fas fa-microchip"></i>
-            </div>
-            <h3>Core & Systems</h3>
-            <p>Base sólida em linguagens de baixo nível e sistemas embarcados.</p>
-            <div class="skill-tags">
-              <span>C++</span>
-              <span>Qt/QML</span>
-              <span>C</span>
-              <span>SQL</span>
-            </div>
-          </div>
-
-          <div class="skill-card">
-            <div class="icon-box">
-              <i class="fas fa-code-branch"></i>
-            </div>
-            <h3>Ferramentas</h3>
-            <p>Fluxo de trabalho ágil e versionamento de código eficiente.</p>
-            <div class="skill-tags">
-              <span>Git</span>
-              <span>Docker</span>
-              <span>Linux</span>
-               <span>MacOs</span>
-              <span>Jira</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="quests" style="padding: 80px 0; position: relative; overflow: hidden;">
-      <div class="map-bg-decoration"></div>
-
-      <div class="container">
-        <h2 class="section-title">Missões & Conquistas</h2>
-        
-        <div class="quest-map">
-          
-          <div class="quest-point left">
-            <div class="quest-marker">
-              <i class="fas fa-laptop-code"></i>
-            </div>
-            <div class="quest-card">
-              <span class="quest-date">Out 2023 • SENAI</span>
-              <h3>Hackathon</h3>
-              <p>O início da jornada competitiva. 24 horas de código intenso, cafeína e validação de MVP sob pressão extrema.</p>
-              <div class="quest-loot">
-                <span><i class="fas fa-star"></i> Trabalho em Equipe</span>
-                <span><i class="fas fa-clock"></i> Gestão de Tempo</span>
-                <span><i class="fas fa-microphone"></i> Pitch</span>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="quest-point right">
-            <div class="quest-marker">
-              <i class="fas fa-lightbulb"></i>
-            </div>
-            <div class="quest-card">
-              <span class="quest-date">Fev 2024 • Sudotec</span>
-              <h3>Ideathon</h3>
-              <p>Foco na modelagem da solução. Uma imersão para transformar ideias abstratas em propostas de valor concretas e pitchs convincentes.</p>
-              <div class="quest-loot">
-                <span><i class="fas fa-star"></i> Ideação</span>
-                <span><i class="fas fa-microphone"></i> Pitch</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="quest-point left">
-            <div class="quest-marker">
-              <i class="fas fa-rocket"></i>
-            </div>
-            <div class="quest-card star-card"> <span class="quest-date">Set 2024 • Sudotec</span>
-              <h3>Startup Weekend</h3>
-              <p>54 horas para criar uma startup do zero. Validação de mercado, mentoria com especialistas e construção de modelo de negócios.</p>
-              <div class="quest-loot">
-                <span><i class="fas fa-crown"></i> Empreendedorismo</span>
-                <span><i class="fas fa-users"></i> Networking</span>
-                <span><i class="fas fa-microphone"></i> Pitch</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="quest-point right">
-            <div class="quest-marker">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <div class="quest-card star-card">
-              <span class="quest-date">Ago 2026 • AWS</span>
-              <h3>AWS Certified Cloud Practitioner</h3>
-              <p>Certificação oficial (CLF-C02), validando conhecimento de fundamentos de nuvem, arquitetura e boas práticas AWS.</p>
-              <div class="quest-loot">
-                <span><i class="fas fa-cloud"></i> Cloud Computing</span>
-                <span><i class="fas fa-shield-alt"></i> Boas Práticas AWS</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="quest-point left">
-            <div class="quest-marker">
-              <i class="fas fa-robot"></i>
-            </div>
-            <div class="quest-card">
-              <span class="quest-date">2026 • Projeto Pessoal</span>
-              <h3>mcp-demo-server</h3>
-              <p>Servidor MCP (Model Context Protocol) em TypeScript, com testes automatizados e validação de schema (Zod), permitindo que agentes de IA chamem e testem as funções expostas.</p>
-              <div class="quest-loot">
-                <span><i class="fas fa-code"></i> TypeScript</span>
-                <span><i class="fas fa-vial"></i> Zod</span>
-              </div>
-              <a href="https://github.com/Alucsky/mcp-demo-server" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:var(--primary);font-weight:600;text-decoration:none;font-size:0.85rem;">
-                <i class="fab fa-github"></i> Ver no GitHub
-              </a>
-            </div>
-          </div>
-
-          <div class="quest-point right">
-            <div class="quest-marker">
-              <i class="fas fa-wifi"></i>
-            </div>
-            <div class="quest-card">
-              <span class="quest-date">2026 • Projeto Pessoal</span>
-              <h3>android-hce-nfc-tester</h3>
-              <p>App React Native (Expo) para emular tags NFC via Host Card Emulation (HCE), testando fluxos de leitura NFC sem depender de tags físicas.</p>
-              <div class="quest-loot">
-                <span><i class="fas fa-mobile-alt"></i> React Native</span>
-                <span><i class="fas fa-wifi"></i> NFC / HCE</span>
-              </div>
-              <a href="https://github.com/Alucsky/android-hce-nfc-tester" target="_blank" style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:var(--primary);font-weight:600;text-decoration:none;font-size:0.85rem;">
-                <i class="fab fa-github"></i> Ver no GitHub
-              </a>
-            </div>
-          </div>
-
-          <div class="map-end-point">
-            <span>Próxima Aventura...</span>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <div class="logo">Dev<span>Samuel</span></div>
-            <p style="margin-top: 15px">
-              Transformando ideias complexas em código limpo e interfaces
-              fluidas.
+    <main>
+      <!-- HERO -->
+      <section id="home" class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-text">
+            <p class="eyebrow">
+              <span class="dot"></span> Desenvolvedor Full Stack · Dois Vizinhos, PR
             </p>
+            <h1>
+              Samuel
+              <em>Molinari</em>
+            </h1>
+            <p class="lead">
+              Construo produtos de ponta a ponta, do app mobile à infraestrutura
+              na AWS. Hoje cuido do check-in por reconhecimento facial, NFC e QR
+              Code de uma plataforma de eventos usada por uma grande cooperativa
+              de crédito.
+            </p>
+            <div class="hero-cta">
+              <a class="btn" href="#trabalho">Ver o que eu fiz <span aria-hidden="true">↓</span></a>
+              <a class="btn btn-ghost" href="assets/curriculo-samuel-molinari.pdf" download>
+                Baixar currículo (PDF)
+              </a>
+            </div>
           </div>
 
-          <div class="footer-section">
-            <h3>Menu</h3>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#experience">Experiência</a></li>
-              <li><a href="#education">Formação</a></li>
-              <li><a href="#skills">Tech Stack</a></li>
-              <li><a href="#quests">Missões & Conquistas</a></li>
-            </ul>
+          <div class="hero-figure">
+            <div class="orbit" aria-hidden="true"></div>
+            <video autoplay loop muted playsinline aria-label="Ilustração animada do Samuel programando">
+              <source src="assets/samuel-coding.webm" type="video/webm" />
+            </video>
+            <div class="shadow" aria-hidden="true"></div>
+            <span class="chip chip-a">AWS Certified</span>
+            <span class="chip chip-b">Next.js · NestJS</span>
+            <span class="chip chip-c">React Native</span>
           </div>
-          
-          <div class="footer-section">
-            <h3>Conecte-se</h3>
-            <div class="social-icons">
-              <a
-                href="https://www.linkedin.com/in/samuel-molinari"
-                target="_blank"
-                class="social-btn"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a
-                href="https://github.com/Alucsky"
-                target="_blank"
-                class="social-btn"
-                ><i class="fab fa-github"></i
-              ></a>
-              <a
-                href="https://wa.me/554699257166"
-                target="_blank"
-                class="social-btn"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
+        </div>
+
+        <div class="wrap">
+          <dl class="stats">
+            <div>
+              <dt>Em produção desde</dt>
+              <dd>2024</dd>
+            </div>
+            <div>
+              <dt>Frentes do produto</dt>
+              <dd>API · Web · App</dd>
+            </div>
+            <div>
+              <dt>Navegação mais rápida</dt>
+              <dd>57%</dd>
+            </div>
+            <div>
+              <dt>Carregamento de imagens</dt>
+              <dd>71% menor</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- MARQUEE -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>TypeScript</span><span>Next.js</span><span>NestJS</span><span>React Native</span><span>AWS Lambda</span><span>ECS</span><span>Prisma</span><span>Chakra UI</span><span>Docker</span><span>GitHub Actions</span><span>Claude Code</span><span>MCP</span>
+          <span>TypeScript</span><span>Next.js</span><span>NestJS</span><span>React Native</span><span>AWS Lambda</span><span>ECS</span><span>Prisma</span><span>Chakra UI</span><span>Docker</span><span>GitHub Actions</span><span>Claude Code</span><span>MCP</span>
+        </div>
+      </div>
+
+      <!-- TRABALHO -->
+      <section id="trabalho" class="section">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="eyebrow">01 · Trabalho em destaque</p>
+            <h2>O que eu resolvi <em>de verdade</em></h2>
+            <p class="section-sub">
+              Entregas na plataforma de gestão de eventos da Tog Lab. O cliente
+              e o código são privados, então aqui vai o problema, a decisão e o
+              resultado.
+            </p>
+          </header>
+
+          <div class="cases">
+            <article class="case reveal">
+              <span class="case-n">01</span>
+              <div class="case-body">
+                <h3>Reconhecimento facial fora do aparelho, dentro da AWS</h3>
+                <p>
+                  O rosto era processado no celular e no navegador de quem
+                  operava o evento: modelos pesados baixados em cada aparelho e
+                  desempenho que dependia do hardware. Movi a extração do
+                  embedding facial para o backend, em uma
+                  <strong>AWS Lambda em container</strong>, e os cinco endpoints
+                  passaram a receber as imagens e decidir sozinhos.
+                </p>
+                <ul class="case-facts">
+                  <li><b>~2.000</b> linhas de visão computacional removidas de web e mobile</li>
+                  <li><b>512</b> posições por vetor, comparadas por similaridade de cosseno</li>
+                  <li><b>5</b> rostos por participante, com quórum entre frames</li>
+                </ul>
+                <p class="tags">
+                  <span>AWS Lambda</span><span>ECR</span><span>NestJS</span><span>MediaPipe</span><span>React Native</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="case reveal">
+              <span class="case-n">02</span>
+              <div class="case-body">
+                <h3>Check-in que funciona sem internet</h3>
+                <p>
+                  Portaria de evento nem sempre tem sinal. O app registra o
+                  check-in por QR Code offline e sincroniza depois. Para o
+                  reenvio nunca duplicar ninguém, cada registro leva um
+                  identificador gerado no dispositivo e a API responde de forma
+                  <strong>idempotente</strong>, provado com testes e2e.
+                </p>
+                <ul class="case-facts">
+                  <li><b>0</b> duplicados em reenvio do mesmo registro</li>
+                  <li><b>4</b> métodos de entrada: NFC, QR Code, facial e manual</li>
+                </ul>
+                <p class="tags">
+                  <span>React Native</span><span>Expo</span><span>NestJS</span><span>Prisma</span><span>Testes e2e</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="case reveal">
+              <span class="case-n">03</span>
+              <div class="case-body">
+                <h3>Biometria tratada como dado sensível</h3>
+                <p>
+                  Rosto é dado pessoal sensível na LGPD. Implementei o
+                  consentimento do participante, a revogação com exclusão
+                  imediata dos vetores faciais e um job diário que apaga o que
+                  passou do prazo de retenção. As imagens enviadas não tocam
+                  disco, armazenamento nem log.
+                </p>
+                <p class="tags">
+                  <span>LGPD</span><span>NestJS</span><span>Jobs agendados</span><span>Cognito</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="case reveal">
+              <span class="case-n">04</span>
+              <div class="case-body">
+                <h3>Deploy destravado e uma falha de autorização fechada</h3>
+                <p>
+                  O deploy em staging parou: a task de seed no
+                  <strong>ECS</strong> morria por falta de memória. Segui o
+                  rastro pelo CloudWatch até a causa e corrigi. Em outra frente,
+                  fechei uma falha crítica em que qualquer usuário autenticado
+                  passava pela checagem de permissão da API.
+                </p>
+                <p class="tags">
+                  <span>ECS</span><span>CloudWatch</span><span>GitHub Actions</span><span>Docker</span><span>Segurança</span>
+                </p>
+              </div>
+            </article>
+
+            <article class="case reveal">
+              <span class="case-n">05</span>
+              <div class="case-body">
+                <h3>Design System com 16 componentes padronizados</h3>
+                <p>
+                  Conduzi o épico que alinhou os componentes do Chakra UI ao
+                  Figma, um por um, e criei os tokens semânticos de cores do
+                  tema. Para não fazer isso no olho, escrevi uma automação no
+                  Claude Code que mede cada propriedade no navegador e compara
+                  com o design.
+                </p>
+                <p class="tags">
+                  <span>Chakra UI</span><span>Figma</span><span>Next.js</span><span>Claude Code</span>
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- JORNADA -->
+      <section id="jornada" class="section section-alt">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="eyebrow">02 · Jornada</p>
+            <h2>Onde eu <em>trabalhei</em></h2>
+          </header>
+
+          <ol class="timeline">
+            <li class="job reveal">
+              <div class="job-when">Jan 2026 <span>Atual</span></div>
+              <div class="job-what">
+                <h3>Desenvolvedor Full Stack</h3>
+                <p class="job-where">Tog Lab · Remoto</p>
+                <ul>
+                  <li>
+                    Plataforma de gestão de eventos com uma grande cooperativa
+                    de crédito como cliente piloto, nos três repositórios: API,
+                    web e app.
+                  </li>
+                  <li>
+                    Módulos completos de produto: landing page configurável com
+                    pré-visualização em tempo real, links rastreáveis com OAuth
+                    do Google Analytics, score de leads e controle de custos.
+                  </li>
+                  <li>
+                    Infraestrutura de passes para Google Wallet e Apple Wallet,
+                    incluindo certificados na conta de desenvolvedor Apple.
+                  </li>
+                  <li>
+                    Automações com Claude Code para o time: lançamento de horas
+                    no Jira, resumos diários e configuração de IA centralizada
+                    em um meta-repositório.
+                  </li>
+                </ul>
+                <p class="tags">
+                  <span>Next.js</span><span>NestJS</span><span>React Native</span><span>AWS</span><span>Chakra UI</span>
+                </p>
+              </div>
+            </li>
+
+            <li class="job reveal">
+              <div class="job-when">Fev 2025 <span>Jan 2026</span></div>
+              <div class="job-what">
+                <h3>Estagiário de Desenvolvimento de Software</h3>
+                <p class="job-where">Tog Lab · Remoto</p>
+                <ul>
+                  <li>
+                    Sistema de gestão para pequenos e médios produtores rurais.
+                    Meu primeiro projeto profissional, onde construí as bases
+                    de NestJS e Next.js.
+                  </li>
+                  <li>
+                    SOLID e TDD desde as primeiras entregas, escrevendo código
+                    à mão, antes dos fluxos assistidos por IA.
+                  </li>
+                  <li>
+                    App mobile com React Native e Expo, APIs com NestJS e Prisma
+                    ORM, deploy na AWS e publicação nas lojas.
+                  </li>
+                </ul>
+                <p class="tags">
+                  <span>React Native</span><span>Expo</span><span>NestJS</span><span>Prisma ORM</span><span>TDD</span>
+                </p>
+              </div>
+            </li>
+
+            <li class="job reveal">
+              <div class="job-when">Ago 2024 <span>Dez 2024</span></div>
+              <div class="job-what">
+                <h3>Desenvolvedor de Software (Trainee)</h3>
+                <p class="job-where">CISS S.A. · Presencial</p>
+                <ul>
+                  <li>
+                    Interfaces para software embarcado com C++, Qt Creator e
+                    QML, no time do CISSBox, um PDV compacto em Raspberry Pi
+                    com mais de 10 mil unidades vendidas.
+                  </li>
+                  <li>
+                    Detecção automática de impressoras, testes de sistema e
+                    emissão de cupons fiscais simulados.
+                  </li>
+                </ul>
+                <p class="tags">
+                  <span>C++</span><span>Qt / QML</span><span>Embarcados</span>
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- PROJETOS -->
+      <section id="projetos" class="section">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="eyebrow">03 · Projetos</p>
+            <h2>Sites e projetos <em>meus</em></h2>
+            <p class="section-sub">
+              Trabalhos independentes, do design ao deploy na Vercel. Mostrados
+              aqui só como portfólio.
+            </p>
+          </header>
+
+          <div class="projects">
+            <a class="project reveal" href="https://paroquia-santo-antonio-web.vercel.app" target="_blank" rel="noopener">
+              <div class="shot"><img src="assets/projects/paroquia.webp" alt="Página inicial do site da Paróquia Santo Antônio de Pádua" loading="lazy" width="1200" height="750" /></div>
+              <div class="project-info">
+                <p class="project-kind">Proposta independente · não oficial</p>
+                <h3>Paróquia Santo Antônio de Pádua <span aria-hidden="true">↗</span></h3>
+                <p>Proposta de novo site para a paróquia de Dois Vizinhos: horários de missa, sacramentos e comunidades. Open source, em português, inglês e espanhol.</p>
+                <p class="tags"><span>Next.js</span><span>Chakra UI</span><span>i18n</span></p>
+              </div>
+            </a>
+
+            <a class="project reveal" href="https://tcs-staging.vercel.app" target="_blank" rel="noopener">
+              <div class="shot"><img src="assets/projects/tcs.webp" alt="Página inicial do site da TCS Máquinas de Costura" loading="lazy" width="1200" height="750" /></div>
+              <div class="project-info">
+                <p class="project-kind">Site institucional</p>
+                <h3>TCS Máquinas de Costura <span aria-hidden="true">↗</span></h3>
+                <p>Oficina de conserto e venda de máquinas de costura. Mostra se está aberto agora e leva direto ao orçamento pelo WhatsApp.</p>
+                <p class="tags"><span>Next.js</span><span>SEO local</span><span>i18n</span></p>
+              </div>
+            </a>
+
+            <a class="project reveal" href="https://doce-cannoli-staging.vercel.app" target="_blank" rel="noopener">
+              <div class="shot"><img src="assets/projects/cannoli.webp" alt="Página inicial do site da Doce Cannoli" loading="lazy" width="1200" height="750" /></div>
+              <div class="project-info">
+                <p class="project-kind">Site de produto</p>
+                <h3>Doce Cannoli <span aria-hidden="true">↗</span></h3>
+                <p>Cannoli siciliano feito à mão em Joinville. Uma página por sabor, com tipografia grande e pedido pelo WhatsApp.</p>
+                <p class="tags"><span>Next.js</span><span>Animação</span><span>i18n</span></p>
+              </div>
+            </a>
+
+            <a class="project reveal" href="https://pratada-web.vercel.app" target="_blank" rel="noopener">
+              <div class="shot"><img src="assets/projects/pratada.webp" alt="Página inicial do site do Pratada" loading="lazy" width="1200" height="750" /></div>
+              <div class="project-info">
+                <p class="project-kind"><span class="wip">Em desenvolvimento</span> Produto próprio</p>
+                <h3>Pratada <span aria-hidden="true">↗</span></h3>
+                <p>App social de dieta: grupos de amigos postam os pratos do dia, mantêm a sequência e disputam o ranking. Ainda estou construindo, com app, API e site.</p>
+                <p class="tags"><span>React Native</span><span>NestJS</span><span>Next.js</span></p>
+              </div>
+            </a>
+          </div>
+
+          <div class="repos">
+            <a class="repo reveal" href="https://github.com/Alucsky/mcp-demo-server" target="_blank" rel="noopener">
+              <div>
+                <h3>mcp-demo-server</h3>
+                <p>Servidor MCP (Model Context Protocol) em TypeScript, com testes automatizados e validação de schema com Zod, para agentes de IA chamarem funções.</p>
+              </div>
+              <span class="repo-go">GitHub ↗</span>
+            </a>
+            <a class="repo reveal" href="https://github.com/Alucsky/android-hce-nfc-tester" target="_blank" rel="noopener">
+              <div>
+                <h3>android-hce-nfc-tester</h3>
+                <p>App React Native (Expo) que emula tags NFC por Host Card Emulation, para testar leitura NFC sem depender de tags físicas.</p>
+              </div>
+              <span class="repo-go">GitHub ↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMAÇÃO -->
+      <section id="formacao" class="section section-alt">
+        <div class="wrap">
+          <header class="section-head">
+            <p class="eyebrow">04 · Formação e marcos</p>
+            <h2>O que me <em>trouxe até aqui</em></h2>
+          </header>
+
+          <div class="edu-grid">
+            <div class="edu-col reveal">
+              <h3 class="col-title">Formação</h3>
+              <ul class="rows">
+                <li>
+                  <span class="row-when">2026 – 2029</span>
+                  <div><b>Engenharia de Software</b><span>UTFPR · em andamento</span></div>
+                </li>
+                <li>
+                  <span class="row-when">1.600h</span>
+                  <div><b>Análise e Desenvolvimento de Sistemas</b><span>SENAI · não concluído, troquei pela vaga de emprego</span></div>
+                </li>
+                <li>
+                  <span class="row-when">600h</span>
+                  <div><b>Programação Aprender &amp; Crescer</b><span>Sudotec · Node.js, TypeScript e Tailwind CSS</span></div>
+                </li>
+                <li>
+                  <span class="row-when">2025</span>
+                  <div><b>Técnico em Administração</b><span>Integrado ao Ensino Médio · concluído</span></div>
+                </li>
+                <li>
+                  <span class="row-when">B1</span>
+                  <div><b>Inglês</b><span>Times Idiomas (atual) · Fisk</span></div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="edu-col reveal">
+              <h3 class="col-title">Certificados e marcos</h3>
+              <ul class="rows">
+                <li class="star">
+                  <span class="row-when">Ago 2026</span>
+                  <div><b>AWS Certified Cloud Practitioner</b><span>Amazon Web Services · CLF-C02</span></div>
+                </li>
+                <li>
+                  <span class="row-when">2025</span>
+                  <div><b>Rocketseat</b><span>React Native, NestJS e Next.js</span></div>
+                </li>
+                <li>
+                  <span class="row-when">Set 2024</span>
+                  <div><b>Startup Weekend Dois Vizinhos</b><span>Techstars · formei e liderei a equipe até o pitch final</span></div>
+                </li>
+                <li>
+                  <span class="row-when">2024</span>
+                  <div><b>C++ avançado</b><span>Alura · threads e funções lambda</span></div>
+                </li>
+                <li>
+                  <span class="row-when">Fev 2024</span>
+                  <div><b>Ideathon</b><span>Sudotec · da ideia ao pitch</span></div>
+                </li>
+                <li>
+                  <span class="row-when">Out 2023</span>
+                  <div><b>Hackathon</b><span>SENAI · 24 horas para validar um MVP</span></div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
+      </section>
+    </main>
 
-        <div class="footer-bottom">
-          <p>&copy; 2026 Samuel Molinari. Todos os direitos reservados.</p>
+    <!-- CONTATO -->
+    <footer id="contato" class="footer">
+      <div class="wrap">
+        <p class="eyebrow">Contato</p>
+        <h2 class="footer-title">Vamos <em>conversar?</em></h2>
+        <div class="footer-links">
+          <a href="https://wa.me/554699257166" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/samuel-molinari" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/Alucsky" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="curriculo.html">Currículo <span aria-hidden="true">→</span></a>
         </div>
+        <p class="footer-note">© 2026 Samuel Molinari · Feito à mão em HTML, CSS e JavaScript.</p>
       </div>
     </footer>
 

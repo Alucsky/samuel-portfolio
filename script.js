@@ -1,34 +1,39 @@
+const root = document.documentElement
+
+// Tema claro/escuro
 const themeBtn = document.getElementById('theme-btn')
-const body = document.body
-const icon = themeBtn.querySelector('i')
-
-const savedTheme = localStorage.getItem('theme')
-if (savedTheme === 'light') {
-  body.classList.add('light-mode')
-  icon.classList.replace('fa-moon', 'fa-sun')
-}
-
 themeBtn.addEventListener('click', () => {
-  body.classList.toggle('light-mode')
-
-  if (body.classList.contains('light-mode')) {
-    icon.classList.replace('fa-moon', 'fa-sun')
-    localStorage.setItem('theme', 'light')
-  } else {
-    icon.classList.replace('fa-sun', 'fa-moon')
-    localStorage.setItem('theme', 'dark')
-  }
+  const light = root.classList.toggle('light')
+  try {
+    localStorage.setItem('theme', light ? 'light' : 'dark')
+  } catch (e) {}
 })
 
+// Barra de progresso da rolagem
 const scrollProgress = document.querySelector('.scroll-progress')
+const updateProgress = () => {
+  const total = document.documentElement.scrollHeight - window.innerHeight
+  const pct = total > 0 ? (window.scrollY / total) * 100 : 0
+  scrollProgress.style.width = `${pct}%`
+}
+window.addEventListener('scroll', updateProgress, { passive: true })
+updateProgress()
 
-window.addEventListener('scroll', () => {
-  const totalHeight = document.body.scrollHeight - window.innerHeight
-
-  const currentScroll = window.scrollY
-
-  const progressHeight =
-    totalHeight > 0 ? (currentScroll / totalHeight) * 100 : 0
-
-  scrollProgress.style.width = `${progressHeight}%`
-})
+// Revelar blocos ao entrar na tela
+const items = document.querySelectorAll('.reveal')
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in')
+          io.unobserve(entry.target)
+        }
+      })
+    },
+    { rootMargin: '0px 0px -8% 0px' },
+  )
+  items.forEach((el) => io.observe(el))
+} else {
+  items.forEach((el) => el.classList.add('in'))
+}
