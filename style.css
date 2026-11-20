@@ -40,6 +40,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 84px;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -50,6 +52,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  overflow-x: clip;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
@@ -244,6 +247,8 @@ em {
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
+  overflow: hidden;
+  overflow: clip;
   padding: 130px 0 56px;
   background:
     radial-gradient(60% 50% at 78% 30%, var(--accent-soft), transparent 70%),
@@ -905,7 +910,7 @@ em {
     padding: 0 16px;
   }
   .chip-b {
-    right: -4%;
+    right: 0;
   }
   .rows li {
     grid-template-columns: 84px 1fr;
