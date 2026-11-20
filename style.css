@@ -1015,6 +1015,15 @@ em {
   font-weight: 500;
   margin: 4px 0 16px;
 }
+.job-intro {
+  color: var(--muted);
+  max-width: 48rem;
+  margin-bottom: 14px;
+}
+.job li strong {
+  color: var(--text);
+  font-weight: 600;
+}
 .job ul {
   list-style: none;
   max-width: 48rem;
