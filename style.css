@@ -1081,6 +1081,7 @@ em {
   grid-auto-columns: calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
   gap: var(--gap);
   overflow-x: auto;
+  overflow-y: hidden;
   overscroll-behavior-x: contain;
   scroll-snap-type: x proximity;
   scrollbar-width: none;
@@ -1473,6 +1474,9 @@ em {
     opacity 0.7s ease,
     transform 0.7s ease,
     border-color 0.3s ease;
+}
+.js .projects .project.reveal:not(.in) {
+  transform: none;
 }
 .js .reveal.in {
   opacity: 1;
