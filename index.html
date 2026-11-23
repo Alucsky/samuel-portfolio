@@ -669,12 +669,22 @@
             </a>
 
             <a class="project reveal" href="https://pratada-web.vercel.app" target="_blank" rel="noopener">
-              <div class="shot"><picture><source media="(min-width: 641px)" srcset="assets/projects/pratada-vertical.webp" /><img src="assets/projects/pratada.webp" alt="Página inicial do site do Pratada" loading="lazy" width="1200" height="750" /></picture></div>
+              <div class="shot"><img src="assets/projects/pratada.webp" alt="Página inicial do site do Pratada" loading="lazy" width="1200" height="750" /></div>
               <div class="project-info">
                 <p class="project-kind"><span class="wip">Em desenvolvimento</span> Produto próprio</p>
                 <h3>Pratada <span aria-hidden="true">↗</span></h3>
                 <p>App social de dieta: grupos de amigos postam os pratos do dia, mantêm a sequência e disputam o ranking. Ainda estou construindo, com app, API e site.</p>
                 <p class="tags"><span>React Native</span><span>NestJS</span><span>Next.js</span></p>
+              </div>
+            </a>
+
+            <a class="project reveal" href="https://calculadora-rpn.pages.dev" target="_blank" rel="noopener">
+              <div class="shot"><img src="assets/projects/calculadora.webp" alt="Calculadora RPN, com todas as teclas e o visor em 1.126,83" loading="lazy" width="1200" height="750" /></div>
+              <div class="project-info">
+                <p class="project-kind"><span class="wip">Em desenvolvimento</span> Produto próprio</p>
+                <h3>Calculadora RPN <span aria-hidden="true">↗</span></h3>
+                <p>Calculadora financeira que cabe inteira na tela do celular, com aulas passo a passo. Nasceu de uma dor minha nas aulas. Grátis, no navegador ou instalada, e funciona sem internet.</p>
+                <p class="tags"><span>JavaScript</span><span>PWA</span><span>SEO</span></p>
               </div>
             </a>
           </div>
@@ -683,6 +693,52 @@
             <button type="button" data-dir="-1" aria-controls="projects-list" aria-label="Projetos anteriores">←</button>
             <button type="button" data-dir="1" aria-controls="projects-list" aria-label="Próximos projetos">→</button>
           </div>
+
+          <article class="inside reveal" aria-labelledby="inside-title">
+            <div class="inside-top">
+              <header>
+                <p class="project-kind"><span class="wip">Em desenvolvimento</span> Por dentro do projeto</p>
+                <h3 id="inside-title">Calculadora RPN: da dor à solução</h3>
+                <p>O site que eu usava nas aulas era antigo, cortava as teclas no celular e era difícil de aprender. Então fiz o meu.</p>
+                <div class="inside-go">
+                  <a class="btn btn-primary" href="https://calculadora-rpn.pages.dev" target="_blank" rel="noopener">Abrir a calculadora ↗</a>
+                  <a class="inside-link" href="https://calculadora-rpn.pages.dev/aulas/" target="_blank" rel="noopener">Ver as aulas ↗</a>
+                </div>
+              </header>
+              <a class="inside-shot" href="https://calculadora-rpn.pages.dev" target="_blank" rel="noopener" aria-label="Abrir a Calculadora RPN">
+                <img src="assets/projects/calculadora.webp" alt="Calculadora RPN: de graça, sem internet, no navegador ou baixada" loading="lazy" width="1200" height="750" />
+              </a>
+            </div>
+            <div class="inside-cols">
+              <div>
+                <h4>O que tem de diferente</h4>
+                <ul>
+                  <li>É um produto meu, aberto a qualquer pessoa, e não um site para um cliente.</li>
+                  <li>Sem framework e sem dependências: 99 de desempenho no Lighthouse em celular.</li>
+                  <li>As contas rodam no aparelho, e as 14 aulas são conferidas no motor a cada publicação: se uma não bate, o site não sai.</li>
+                  <li>Instala direto do navegador e funciona sem internet.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>O que aprendi</h4>
+                <ul>
+                  <li>Como o Google descobre, rastreia e indexa um site, com Search Console, sitemap e dados estruturados.</li>
+                  <li>Como anúncio funciona por dentro: regras do AdSense, LGPD e pedir consentimento sem travar o uso.</li>
+                  <li>Que recorte de câmera, barra de gestos e tela pequena são requisito, não detalhe.</li>
+                  <li>Que cor e layout saem de quem usa: escuro para estudar, claro para o projetor da sala.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>O que falta</h4>
+                <ul class="todo">
+                  <li>Aparecer na busca do Google, liberada há pouco.</li>
+                  <li>Aprovação do AdSense, em análise. Os anúncios ainda estão desligados.</li>
+                  <li>Programação e títulos, as teclas PRICE e YTM.</li>
+                  <li>Testar com uma turma de verdade.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
 
           <div class="repos">
             <a class="repo reveal" href="https://github.com/Alucsky/mcp-demo-server" target="_blank" rel="noopener">

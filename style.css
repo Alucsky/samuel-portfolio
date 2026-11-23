@@ -1212,6 +1212,124 @@ em {
   font-size: 0.95rem;
 }
 
+.inside {
+  margin-top: 36px;
+  padding: 32px;
+  border-radius: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+.inside h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.7rem;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-top: 10px;
+}
+.inside-top {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: 40px;
+  align-items: center;
+}
+.inside header > p:not(.project-kind) {
+  color: var(--muted);
+  margin-top: 12px;
+  max-width: 46ch;
+}
+.inside-go {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 22px;
+  margin-top: 22px;
+}
+.inside-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 0;
+}
+.inside-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.inside-shot {
+  display: block;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+.inside-shot:hover {
+  transform: translateY(-4px);
+}
+.inside-shot:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 6px;
+}
+.inside-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.inside-cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 26px;
+}
+.inside h4 {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+.inside ul {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+.inside li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.inside li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+.inside .todo li::before {
+  background: none;
+  border: 2px solid var(--accent);
+}
+@media (max-width: 900px) {
+  .inside {
+    padding: 24px 20px;
+  }
+  .inside-top {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .inside-cols {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+}
+
 .repos {
   margin-top: 28px;
   border-top: 1px solid var(--line);
