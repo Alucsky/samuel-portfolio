@@ -130,3 +130,27 @@ if (cases.length && stage) {
     cases.forEach((c) => c.classList.add('is-active'))
   }
 }
+
+// Projetos: setas aparecem só quando há mais cartões do que cabem na tela
+const projectsList = document.getElementById('projects-list')
+const projectsNav = document.querySelector('.projects-nav')
+if (projectsList && projectsNav) {
+  const [prev, next] = projectsNav.querySelectorAll('button')
+  const updateNav = () => {
+    const max = projectsList.scrollWidth - projectsList.clientWidth
+    projectsNav.hidden = max <= 2
+    prev.disabled = projectsList.scrollLeft <= 2
+    next.disabled = projectsList.scrollLeft >= max - 2
+  }
+  projectsNav.addEventListener('click', (e) => {
+    const btn = e.target.closest('button')
+    if (!btn) return
+    const card = projectsList.querySelector('.project')
+    const step = card.offsetWidth + parseFloat(getComputedStyle(projectsList).columnGap)
+    const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    projectsList.scrollBy({ left: step * Number(btn.dataset.dir), behavior: smooth ? 'smooth' : 'auto' })
+  })
+  projectsList.addEventListener('scroll', updateNav, { passive: true })
+  window.addEventListener('resize', updateNav)
+  updateNav()
+}

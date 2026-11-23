@@ -627,24 +627,34 @@
             </p>
           </header>
 
-          <div class="projects">
+          <div class="projects" id="projects-list" role="region" aria-label="Lista de projetos" tabindex="0">
             <a class="project reveal" href="https://paroquia-santo-antonio-web.vercel.app" target="_blank" rel="noopener">
               <div class="shot"><img src="assets/projects/paroquia.webp" alt="Página inicial do site da Paróquia Santo Antônio de Pádua" loading="lazy" width="1200" height="750" /></div>
               <div class="project-info">
                 <p class="project-kind">Proposta independente · não oficial</p>
                 <h3>Paróquia Santo Antônio de Pádua <span aria-hidden="true">↗</span></h3>
-                <p>Proposta de novo site para a paróquia de Dois Vizinhos: horários de missa, sacramentos e comunidades. Open source, em português, inglês e espanhol.</p>
+                <p>Proposta de novo site para a paróquia de Dois Vizinhos, que vou apresentar à administração para substituir o atual. Open source, em português, inglês e espanhol.</p>
                 <p class="tags"><span>Next.js</span><span>Chakra UI</span><span>i18n</span></p>
               </div>
             </a>
 
-            <a class="project reveal" href="https://tcs-staging.vercel.app" target="_blank" rel="noopener">
+            <a class="project reveal" href="https://tcs-maquinas-de-costura.samuelmolinari8.workers.dev" target="_blank" rel="noopener">
               <div class="shot"><img src="assets/projects/tcs.webp" alt="Página inicial do site da TCS Máquinas de Costura" loading="lazy" width="1200" height="750" /></div>
               <div class="project-info">
                 <p class="project-kind">Cliente real · negócio local</p>
                 <h3>TCS Máquinas de Costura <span aria-hidden="true">↗</span></h3>
                 <p>Oficina de conserto e venda de máquinas de costura. Mostra se está aberto agora e leva direto ao orçamento pelo WhatsApp.</p>
                 <p class="tags"><span>Next.js</span><span>SEO local</span><span>i18n</span></p>
+              </div>
+            </a>
+
+            <a class="project reveal" href="https://hemilly-nails.samuelmolinari8.workers.dev" target="_blank" rel="noopener">
+              <div class="shot"><img src="assets/projects/hemilly.webp" alt="Página inicial do site da Hemilly Nails" loading="lazy" width="1200" height="750" /></div>
+              <div class="project-info">
+                <p class="project-kind">Cliente real · negócio local</p>
+                <h3>Hemilly Nails <span aria-hidden="true">↗</span></h3>
+                <p>Nail designer em Joinville. Uma cabine de LED interativa mostra os trabalhos, a cliente monta a própria unha e agenda pelo WhatsApp.</p>
+                <p class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></p>
               </div>
             </a>
 
@@ -659,7 +669,7 @@
             </a>
 
             <a class="project reveal" href="https://pratada-web.vercel.app" target="_blank" rel="noopener">
-              <div class="shot"><img src="assets/projects/pratada.webp" alt="Página inicial do site do Pratada" loading="lazy" width="1200" height="750" /></div>
+              <div class="shot"><picture><source media="(min-width: 641px)" srcset="assets/projects/pratada-vertical.webp" /><img src="assets/projects/pratada.webp" alt="Página inicial do site do Pratada" loading="lazy" width="1200" height="750" /></picture></div>
               <div class="project-info">
                 <p class="project-kind"><span class="wip">Em desenvolvimento</span> Produto próprio</p>
                 <h3>Pratada <span aria-hidden="true">↗</span></h3>
@@ -667,6 +677,11 @@
                 <p class="tags"><span>React Native</span><span>NestJS</span><span>Next.js</span></p>
               </div>
             </a>
+          </div>
+
+          <div class="projects-nav" hidden>
+            <button type="button" data-dir="-1" aria-controls="projects-list" aria-label="Projetos anteriores">←</button>
+            <button type="button" data-dir="1" aria-controls="projects-list" aria-label="Próximos projetos">→</button>
           </div>
 
           <div class="repos">
@@ -763,7 +778,7 @@
         <p class="eyebrow">Contato</p>
         <h2 class="footer-title">Vamos <em>conversar?</em></h2>
         <div class="footer-links">
-          <a href="https://wa.me/554699257166" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a>
+          <a href="https://wa.me/5546999257166" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a>
           <a href="https://www.linkedin.com/in/samuel-molinari" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
           <a href="https://github.com/Alucsky" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
           <a href="curriculo.html">Currículo <span aria-hidden="true">→</span></a>
