@@ -1749,3 +1749,16 @@ em {
     display: none;
   }
 }
+
+.mark {
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  padding: 2px 9px;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+}
+.rows a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
